@@ -1,0 +1,32 @@
+~$ mkdir Игрушки_для_школьников
+~$ mkdir Игрушки_для_дошколят
+
+:~/Игрушки_для_школьников$ touch Роботы.txt
+:~/Игрушки_для_школьников$ touch Конструктор.txt
+:~/Игрушки_для_школьников$ touch Настольные_игры.txt
+:~/Игрушки_для_дошколят$ touch Мягкие_игрушки.txt
+:~/Игрушки_для_дошколят$ touch Куклы.txt
+:~/Игрушки_для_дошколят$ touch Машинки.txt
+
+~$ mkdir Имя_игрушки
+~$ mv Игрушки_для_школьников Имя_игрушки
+~$ mv Игрушки_для_дошколят Имя_игрушки
+
+:~$ mv Имя_игрушки/ Игрушки/
+
+:~/Игрушки$ ls
+
+snap find "JetBrains IDE"
+sudo snap install intellij-idea-community --classic
+sudo snap remove intellij-idea-community --classic
+
+
+mkdir /home/humanbox/bash-scripts/backup
+cp /etc/apache2/apache2.conf  /home/humanbox/bash-scripts/backup/apache2.conf-backup
+cp /etc/apache2/sites-available/site  /home/humanbox/bash-scripts/backup/site-backup
+cp /etc/proftpd/proftpd.conf  /home/humanbox/bash-scripts/backup/proftpd.conf-backup
+tar cvvzf  "/home/humanbox/bash-scripts/backup-`date +%F-%X`.tar.gz" /home/humanbox/bash-scripts/backup/
+rm -r /home/humanbox/bash-scripts/backup
+
+sudo crontab -u root -e
+*/3 * * * * /home/humanbox/backup-script
