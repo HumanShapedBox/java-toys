@@ -13,10 +13,18 @@ import Toys.ToysForRaffle.StuffedToys;
 
 public class ListOfToys {
     
-    ArrayList<Toys> toysForGame = new ArrayList<>();
+    public ArrayList<Toys> toysForGame;
+    public int size;
 
-    public static void fillList(ArrayList<Toys> listOfToys) {
-        for (int i = 0; i <= 10; i++) {
+    public ListOfToys(){
+        this.toysForGame = new ArrayList<>();
+        this.size = 20;
+        fillList(toysForGame);
+    }
+
+
+    private void fillList(ArrayList<Toys> listOfToys) {
+        for (int i = 0; i <= this.size; i++) {
             switch (new Random().nextInt(6)) {
                 case 0:
                     listOfToys.add(new Robots(UUID.randomUUID()));
