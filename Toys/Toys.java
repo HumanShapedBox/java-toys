@@ -8,8 +8,8 @@ public abstract class Toys implements ToysInterface{
     protected int amount;
     protected int weight;
 
-    public Toys(int id, String name, int amount, int weight) {
-        this.id = UUID.randomUUID();
+    public Toys(UUID id, String name, int amount, int weight) {
+        this.id = id;
         this.amount = amount;
         this.weight = weight;
     }

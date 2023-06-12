@@ -1,10 +1,12 @@
 package Toys.ToysForRaffle;
 
+import java.util.UUID;
+
 import Toys.Toys;
 
 public class BuildingKit extends Toys {
 
-    public BuildingKit(int id, String name, int amount, int weight) {
+    public BuildingKit(UUID id) {
         super(id, "Конструктор", 15, 20);
     }
 

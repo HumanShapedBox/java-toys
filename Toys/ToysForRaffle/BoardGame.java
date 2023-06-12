@@ -1,10 +1,12 @@
 package Toys.ToysForRaffle;
 
+import java.util.UUID;
+
 import Toys.Toys;
 
 public class BoardGame extends Toys{
 
-    public BoardGame(int id, String name, int amount, int weight) {
+    public BoardGame(UUID id) {
         super(id, "Настольная игра", 15, 20);
     }
     
