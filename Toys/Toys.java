@@ -14,12 +14,17 @@ public abstract class Toys implements ToysInterface{
         this.weight = weight;
     }
 
-    public void countToys() {
+    protected void countToys() {
         this.amount -= 1;
+    }
+
+    public int getToysNum(){
+        return this.amount;
     }
 
     public void setWeight(int newWeight){
         this.weight = newWeight;
     }
+
 }
 

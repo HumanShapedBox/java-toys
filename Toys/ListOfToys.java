@@ -47,5 +47,32 @@ public class ListOfToys {
             }
         }
     }
+
+    private void checkToys(ArrayList<Toys> listOfToys){
+        for (Toys toy : listOfToys) {
+            toy.countToys();
+        }
+    }
+
+    private boolean isAvaileble(Toys nameOfToy){
+        boolean flag = true;
+        if(nameOfToy.getToysNum() == 0) flag = false;
+        return flag;
+    }
+
+    private void lastOfToys(ArrayList<Toys> listOfToys){
+        checkToys(listOfToys);
+        for (Toys toy : listOfToys) {
+            if(!isAvaileble(toy)) listOfToys.remove(toy);
+        }
+    }
+
+    // public void gameOfToys(ArrayList<Toys> listOfToys){
+    //     Toys winner;
+        
+    //     lastOfToys(listOfToys);
+    //     winner.talkToMe();
+    // }
+
 }
 
