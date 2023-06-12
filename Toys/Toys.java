@@ -1,7 +1,7 @@
 package Toys;
 
 public abstract class Toys {
-    private int id;
+    protected int id;
     protected String name;
     protected int amount;
     protected int weight;
@@ -12,4 +12,6 @@ public abstract class Toys {
         this.amount = amount;
         this.weight = weight;
     }
+
 }
+
