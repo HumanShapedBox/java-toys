@@ -5,8 +5,11 @@ import Toys.Toys;
 public class Robots extends Toys {
 
     public Robots(int id, String name, int amount, int weight) {
-        super(id, "Робот", amount, 10);
-        //TODO Auto-generated constructor stub
+        super(id, "Робот", 10, 10);
     }
     
+    @Override
+    public void talkToMe(){
+        System.out.println("Робот. Бип-буп-буп, бро!");
+    }
 }
