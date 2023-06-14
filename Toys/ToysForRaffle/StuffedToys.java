@@ -10,6 +10,10 @@ public class StuffedToys extends Toys{
         super(id, "Мягкая игрушка", 40);
     }
 
+    public StuffedToys(UUID id, int weight) {
+        super(id, "Мягкая игрушка", weight);
+    }
+
     @Override
     public void talkToMe(){
         System.out.println("Мягкая игрушка. Время обнимашек!");
