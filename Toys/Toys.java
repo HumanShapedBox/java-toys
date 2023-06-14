@@ -12,9 +12,8 @@ public abstract class Toys implements ToysInterface{
         this.weight = weight;
     }
 
-    public void setWeight(int newWeight){
-        this.weight = newWeight;
-    }
+    public void setWeight(int newWeight){this.weight = newWeight;}
 
+    public UUID getId(){return this.id;};
 }
 
