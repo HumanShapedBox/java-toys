@@ -7,7 +7,7 @@ import Toys.Toys;
 public class Robots extends Toys {
 
     public Robots(UUID id) {
-        super(id, "Робот", 10, 10);
+        super(id, "Робот", 10);
     }
     
     @Override

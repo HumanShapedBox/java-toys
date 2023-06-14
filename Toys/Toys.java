@@ -5,21 +5,11 @@ import java.util.UUID;
 public abstract class Toys implements ToysInterface{
     protected UUID id;
     protected String name;
-    protected int amount;
     protected int weight;
 
-    public Toys(UUID id, String name, int amount, int weight) {
+    public Toys(UUID id, String name, int weight) {
         this.id = id;
-        this.amount = amount;
         this.weight = weight;
-    }
-
-    protected void countToys() {
-        this.amount -= 1;
-    }
-
-    public int getToysNum(){
-        return this.amount;
     }
 
     public void setWeight(int newWeight){
