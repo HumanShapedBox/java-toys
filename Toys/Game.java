@@ -15,8 +15,13 @@ public class Game {
     public void startGame(){
         int happyNumber = giveMeNumber();
         ArrayList<Toys> listOfToys = new ArrayList<>();
+
         addToys(listOfToys);
-        
+        Set<Integer> lottery = prizeWeight(listOfToys);
+        int winnerToyWeight = winnerWeight(lottery, happyNumber);
+
+        Toys winner = giveMeWinner(listOfToys, winnerToyWeight);
+
         }
 
 //    } 
@@ -72,7 +77,7 @@ public class Game {
             nums.add(element);
         }
         for(int i = 0; i <= toysWeigth.size(); i++){
-           nums.add(win - nums.get(i));
+           nums.add(num - nums.get(i));
         }
         Collections.sort(nums);
         win = nums.get(0);
@@ -89,5 +94,7 @@ public class Game {
         }
         return winner;
     }
+
+    
 
 }
