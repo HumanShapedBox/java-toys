@@ -12,24 +12,35 @@ import Toys.ToysForRaffle.*;
 
 public class Game {
 
-    protected int amount;
-
-    public void setAmount(int num){this.amount = num;}
-
     public void startGame(){
         int happyNumber = giveMeNumber();
-        // ArrayList<Toys> listOfToys = new ArrayList<>();
-        // for(int i = 0; i <= amount; i++){
-        //     addToys(listOfToys, Robots);
+        ArrayList<Toys> listOfToys = new ArrayList<>();
+        addToys(listOfToys);
+        
         }
 
-//    }
+//    } 
 
-    // private void addToys(ArrayList<Toys> listOfToys) {
-    //     for(int i = 0; i <= amount; i++){
-    //         listOfToys.add(new Robots())
-    //     }
-    // }
+    private void addToys(ArrayList<Toys> listOfToys) {
+        for(int i = 0; i <= 5; i++){
+            listOfToys.add(new Robots(UUID.randomUUID()));
+        }
+        for(int i = 0; i <= 5; i++){
+            listOfToys.add(new BoardGame(UUID.randomUUID()));
+        }
+        for(int i = 0; i <= 5; i++){
+            listOfToys.add(new BuildingKit(UUID.randomUUID()));
+        }
+        for(int i = 0; i <= 5; i++){
+            listOfToys.add(new Cars(UUID.randomUUID()));
+        }
+        for(int i = 0; i <= 5; i++){
+            listOfToys.add(new Dolls(UUID.randomUUID()));
+        }
+        for(int i = 0; i <= 5; i++){
+            listOfToys.add(new StuffedToys(UUID.randomUUID()));
+        }
+    }
 
     private void delToys(ArrayList<Toys> listOfToys, UUID id) {
         for (int i = 0; i <= listOfToys.size(); i++) {
