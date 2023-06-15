@@ -21,10 +21,12 @@ public class Game {
         int winnerToyWeight = winnerWeight(lottery, happyNumber);
 
         Toys winner = giveMeWinner(listOfToys, winnerToyWeight);
+        UUID winToy = winnersId(winner);
 
+        delToys(listOfToys, winToy);
+
+        winner.talkToMe();
         }
-
-//    } 
 
     private void addToys(ArrayList<Toys> listOfToys) {
         for(int i = 0; i <= 5; i++){
@@ -95,6 +97,6 @@ public class Game {
         return winner;
     }
 
-    
+    private UUID winnersId(Toys item){return item.getId();}
 
 }

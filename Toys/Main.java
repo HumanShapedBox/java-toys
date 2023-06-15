@@ -1,8 +1,9 @@
-// package Toys;
+package Toys;
 
-// public class Main {
-//     public static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
 
-//         ListOfToys toysForGame = new ListOfToys();
-//     }
-// }
+        Game toyLottery = new Game();
+        toyLottery.startGame();
+    }
+}
